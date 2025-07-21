@@ -30,13 +30,21 @@ class CriteriaGrade(BaseModel):
     grade: bool = Field(description="Does the response meet the provided criteria?")
     justification: str = Field(description="The justification for the grade and score, including specific examples from the response.")
 
-# Create a global LLM for evaluation to avoid recreating it for each test
-criteria_eval_llm = init_chat_model("openai:gpt-4o")
-criteria_eval_structured_llm = criteria_eval_llm.with_structured_output(CriteriaGrade)
-
 # Global variables for module name and imported module
 AGENT_MODULE = None
 agent_module = None
+criteria_eval_llm = None
+criteria_eval_structured_llm = None
+
+def get_eval_llm():
+    """Get the evaluation LLM, initializing it if needed."""
+    global criteria_eval_llm, criteria_eval_structured_llm
+    
+    if criteria_eval_llm is None:
+        criteria_eval_llm = init_chat_model("openai:gpt-4o")
+        criteria_eval_structured_llm = criteria_eval_llm.with_structured_output(CriteriaGrade)
+    
+    return criteria_eval_llm, criteria_eval_structured_llm
 
 @pytest.fixture(autouse=True, scope="function")
 def set_agent_module(agent_module_name):
@@ -204,6 +212,9 @@ def test_response_criteria_evaluation(email_input, email_name, criteria, expecte
     
     # Generate message output string for evaluation
     all_messages_str = format_messages_string(values['messages'])
+    
+    # Get the evaluation LLM
+    _, criteria_eval_structured_llm = get_eval_llm()
     
     # Evaluate against criteria
     eval_result = criteria_eval_structured_llm.invoke([
