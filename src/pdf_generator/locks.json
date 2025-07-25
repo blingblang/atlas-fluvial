@@ -1,0 +1,124 @@
+{
+  "locks": [
+    {
+      "id": 1,
+      "name": "Écluse de Melneuf",
+      "latitude": 47.496701,
+      "longitude": -1.925656,
+      "slope": 270,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at Melneuf"
+    },
+    {
+      "id": 2,
+      "name": "Écluse de la Morlière",
+      "latitude": 47.302000,
+      "longitude": -1.543000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at La Morlière"
+    },
+    {
+      "id": 3,
+      "name": "Écluse de la Chaussée",
+      "latitude": 47.301000,
+      "longitude": -1.544000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at La Chaussée"
+    },
+    {
+      "id": 4,
+      "name": "Écluse de la Passerelle",
+      "latitude": 47.217000,
+      "longitude": -1.712000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at La Passerelle"
+    },
+    {
+      "id": 5,
+      "name": "Écluse d'Arzal",
+      "latitude": 47.625000,
+      "longitude": -2.000000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Barrage d'Arzal - tidal lock"
+    },
+    {
+      "id": 6,
+      "name": "Écluse de la 3ème Rive",
+      "latitude": 47.319000,
+      "longitude": -1.602000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at 3ème Rive"
+    },
+    {
+      "id": 7,
+      "name": "Écluse de la 4ème Rive",
+      "latitude": 47.316000,
+      "longitude": -1.601000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at 4ème Rive"
+    },
+    {
+      "id": 8,
+      "name": "Écluse des Etocs du Coudray",
+      "latitude": 47.247000,
+      "longitude": -1.788000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at Etocs du Coudray"
+    },
+    {
+      "id": 9,
+      "name": "Écluse des Abattoirs",
+      "latitude": 47.215000,
+      "longitude": -1.715000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at Abattoirs"
+    },
+    {
+      "id": 10,
+      "name": "Écluse de Port au Douet",
+      "latitude": 47.216000,
+      "longitude": -1.709000,
+      "slope": 0,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Lock at Port au Douet"
+    },
+    {
+      "id": 11,
+      "name": "Arzal",
+      "latitude": 47.498835,
+      "longitude": -2.383530,
+      "slope": 280,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Sector limit at Arzal"
+    },
+    {
+      "id": 12,
+      "name": "Bateliers",
+      "latitude": 47.64860588194508,
+      "longitude": -2.087047173506169,
+      "slope": 350,
+      "maps": [1],
+      "waterway": "Vilaine",
+      "description": "Sector limit at Bateliers"
+    }
+  ]
+}

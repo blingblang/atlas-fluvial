@@ -65,8 +65,19 @@ class MapGenerator:
         # Fit to bounds
         m.fit_bounds([nw_corner, se_corner])
         
+        # Add waterway layer with light blue color
+        # Using OpenStreetMap with custom styling for waterways
+        folium.TileLayer(
+            tiles='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            attr='OpenStreetMap',
+            name='OSM with Waterways',
+            overlay=False,
+            control=True
+        ).add_to(m)
+        
         # Add scale control
-        folium.plugins.MeasureControl(position='bottomleft').add_to(m)
+        import folium.plugins as plugins
+        plugins.MeasureControl(position='bottomleft').add_to(m)
         
         # Add markers for corners (optional, for debugging)
         folium.Marker(

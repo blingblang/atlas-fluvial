@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Waterways - Atlas Fluvial</title>
+    <meta name="description" content="Explore navigable waterways across 19 European countries. Detailed maps and information for canals, rivers, and lakes.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a202c;
+            background: #f7fafc;
+        }
+        .nav {
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0064C8;
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #0064C8;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0064C8 0%, #0078DC 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .button {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+            display: inline-block;
+        }
+        .button-primary {
+            background: white;
+            color: #0064C8;
+        }
+        .button-primary:hover {
+            background: #f7fafc;
+            transform: translateY(-2px);
+        }
+        .button-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+        .button-secondary:hover {
+            background: white;
+            color: #0064C8;
+        }
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .grid {
+            display: grid;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+        .card p {
+            color: #718096;
+            line-height: 1.6;
+        }
+        .footer {
+            background: #1a202c;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .footer h3 {
+            margin-bottom: 1rem;
+        }
+        .footer a {
+            color: #cbd5e0;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2d3748;
+            color: #a0aec0;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .button-group {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="logo">Atlas Fluvial</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/waterways/">Waterways</a></li>
+                <li><a href="/planning/">Journey Planning</a></li>
+                <li><a href="/guides/">Navigation Guides</a></li>
+                <li><a href="/vessels/">Vessel Options</a></li>
+                <li><a href="/resources/">Resources</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+    <section class="hero" style="padding: 4rem 2rem;">
+        <h1>European Waterways</h1>
+        <p>Over 40,000 kilometers of navigable waterways connecting cities, towns, and countryside across Europe.</p>
+    </section>
+    
+    <section class="section">
+        <h2 class="section-title">Waterways by Country</h2>
+        <div class="grid grid-3">
+            <a href="/waterways/france/" class="card" style="text-decoration: none; color: inherit; display: block;">
+                <h3>France</h3>
+                <p style="color: #0064C8; font-weight: 600;">8,500 km navigable</p>
+                <p>Canal du Midi, Seine, Rhône</p>
+            </a>
+            <div class="card">
+                <h3>Netherlands</h3>
+                <p style="color: #0064C8; font-weight: 600;">6,200 km navigable</p>
+                <p>Amsterdam Canals, IJsselmeer</p>
+            </div>
+            <div class="card">
+                <h3>Germany</h3>
+                <p style="color: #0064C8; font-weight: 600;">7,300 km navigable</p>
+                <p>Rhine, Main-Danube Canal</p>
+            </div>
+            <div class="card">
+                <h3>Belgium</h3>
+                <p style="color: #0064C8; font-weight: 600;">2,000 km navigable</p>
+                <p>Albert Canal, Meuse</p>
+            </div>
+            <div class="card">
+                <h3>United Kingdom</h3>
+                <p style="color: #0064C8; font-weight: 600;">3,200 km navigable</p>
+                <p>Thames, Grand Union Canal</p>
+            </div>
+            <div class="card">
+                <h3>Italy</h3>
+                <p style="color: #0064C8; font-weight: 600;">2,400 km navigable</p>
+                <p>Po River, Venetian Lagoon</p>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <h3>Atlas Fluvial</h3>
+                <p>Your comprehensive guide to navigating European waterways with confidence.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="/waterways/">Waterway Maps</a></li>
+                    <li><a href="/guides/">Navigation Guides</a></li>
+                    <li><a href="/planning/">Journey Planning</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>For inquiries about Atlas Fluvial:</p>
+                <a href="mailto:info@atlasfluvial.com">info@atlasfluvial.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Atlas Fluvial. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

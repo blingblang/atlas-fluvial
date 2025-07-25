@@ -41,12 +41,13 @@ class NetlifyUploader:
         unique_name = f"{path.stem}_{timestamp}{path.suffix}"
         return unique_name
     
-    def upload_file(self, file_path: str, preserve_filename: bool = False) -> str:
+    def upload_file(self, file_path: str, preserve_filename: bool = False, custom_filename: str = None) -> str:
         """Upload a file to Netlify CDN.
         
         Args:
             file_path: Path to the file to upload
             preserve_filename: If True, keeps original filename; if False, adds timestamp
+            custom_filename: Optional custom filename to use
             
         Returns:
             Public URL of the uploaded file
@@ -55,9 +56,12 @@ class NetlifyUploader:
             raise FileNotFoundError(f"File not found: {file_path}")
         
         # Determine filename
-        filename = os.path.basename(file_path)
-        if not preserve_filename:
-            filename = self._generate_unique_filename(filename)
+        if custom_filename:
+            filename = custom_filename
+        else:
+            filename = os.path.basename(file_path)
+            if not preserve_filename:
+                filename = self._generate_unique_filename(filename)
         
         # Read file content
         with open(file_path, 'rb') as f:
@@ -106,29 +110,35 @@ class NetlifyUploader:
         
         return public_url
     
-    def upload_pdf(self, pdf_path: str) -> str:
+    def upload_pdf(self, pdf_path: str, map_id: Optional[int] = None) -> str:
         """Upload a PDF file to Netlify CDN.
         
         Args:
             pdf_path: Path to the PDF file
+            map_id: Optional map ID for consistent naming
             
         Returns:
             Public URL of the uploaded PDF
         """
-        return self.upload_file(pdf_path, preserve_filename=False)
+        if map_id == 1:
+            # Use consistent naming for Map 1
+            return self.upload_file(pdf_path, custom_filename="map_1_latest.pdf")
+        else:
+            return self.upload_file(pdf_path, preserve_filename=False)
 
 
 def upload_to_netlify(file_path: str, site_id: Optional[str] = None, 
-                     access_token: Optional[str] = None) -> str:
+                     access_token: Optional[str] = None, map_id: Optional[int] = None) -> str:
     """Upload a file to Netlify CDN.
     
     Args:
         file_path: Path to the file to upload
         site_id: Netlify site ID (optional if set in environment)
         access_token: Netlify access token (optional if set in environment)
+        map_id: Optional map ID for consistent naming
         
     Returns:
         Public URL of the uploaded file
     """
     uploader = NetlifyUploader(site_id, access_token)
-    return uploader.upload_pdf(file_path)
+    return uploader.upload_pdf(file_path, map_id=map_id)

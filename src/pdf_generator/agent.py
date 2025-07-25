@@ -13,24 +13,23 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import HumanMessage, AIMessage
 
 from .pdf_creator import create_pdf_with_map
-# Use simple map generator by default to avoid Selenium/Folium issues
-from .simple_map_generator import create_map_image
+# Use fixed scale map generator - ALWAYS 1:375,000
+from .fixed_scale_map import create_map_image as create_configured_map
 from .netlify_uploader import upload_to_netlify
 
 
 @tool
-def generate_map(latitude: float, longitude: float) -> str:
-    """Generate a map image from NW corner coordinates.
+def generate_map(map_id: int = 1) -> str:
+    """Generate a map image for the specified map ID.
     
     Args:
-        latitude: Northwest corner latitude
-        longitude: Northwest corner longitude
+        map_id: The ID of the map to generate (1-53)
         
     Returns:
         Path to the generated map image
     """
     output_path = tempfile.mktemp(suffix='.png')
-    return create_map_image(latitude, longitude, output_path)
+    return create_configured_map(map_id, output_path)
 
 
 @tool
@@ -48,16 +47,17 @@ def create_pdf(map_image_path: str) -> str:
 
 
 @tool
-def upload_pdf_to_netlify(pdf_path: str) -> str:
+def upload_pdf_to_netlify(pdf_path: str, map_id: int = None) -> str:
     """Upload PDF to Netlify CDN.
     
     Args:
         pdf_path: Path to the PDF file
+        map_id: Optional map ID for consistent naming (Map 1 gets consistent URL)
         
     Returns:
         Public URL of the uploaded PDF
     """
-    return upload_to_netlify(pdf_path)
+    return upload_to_netlify(pdf_path, map_id=map_id)
 
 
 class PDFGeneratorAgent:
@@ -81,13 +81,14 @@ class PDFGeneratorAgent:
             ("system", """You are a PDF generation agent that creates documents with maps and cultural information.
             
             Your task is to:
-            1. Generate a map using OpenStreetMap data from the given NW corner coordinates
+            1. Generate a map using the specified map ID from the configuration
             2. Create a PDF with two pages:
-               - Page 1: Map page labeled "Map 1"
+               - Page 1: Map page with the configured name
                - Page 2: Culture page with 6 sections (2x3 grid) and today's date
-            3. Upload the PDF to Netlify CDN
+            3. Upload the PDF to Netlify CDN - when uploading, pass the map_id to ensure Map 1 gets a consistent URL
             
             Always follow this sequence: generate map -> create PDF -> upload to Netlify.
+            When calling upload_pdf_to_netlify, always include the map_id parameter.
             Return the public URL of the uploaded PDF.
             """),
             MessagesPlaceholder(variable_name="chat_history"),
@@ -103,22 +104,19 @@ class PDFGeneratorAgent:
             return_intermediate_steps=True
         )
     
-    def generate_pdf(self, nw_latitude: float, nw_longitude: float) -> Dict[str, Any]:
+    def generate_pdf(self, map_id: int = 1) -> Dict[str, Any]:
         """Generate PDF with map and upload to Netlify.
         
         Args:
-            nw_latitude: Northwest corner latitude
-            nw_longitude: Northwest corner longitude
+            map_id: The ID of the map to generate (1-53)
             
         Returns:
             Dictionary with generation results including the public URL
         """
-        input_message = f"""Generate a PDF with a map starting from NW corner at:
-        Latitude: {nw_latitude}
-        Longitude: {nw_longitude}
+        input_message = f"""Generate a PDF for Map ID {map_id}.
         
-        The map should be at scale 1:375,000 and fit an A4 page.
-        Include waterways and locks if available in the map data.
+        Use the configuration from the JSON file to generate the appropriate map.
+        The map will be centered at the configured coordinates with the specified scale and rotation.
         """
         
         result = self.executor.invoke({
@@ -129,10 +127,7 @@ class PDFGeneratorAgent:
         return {
             "public_url": result["output"],
             "generated_at": datetime.now().isoformat(),
-            "coordinates": {
-                "nw_latitude": nw_latitude,
-                "nw_longitude": nw_longitude
-            }
+            "map_id": map_id
         }
 
 

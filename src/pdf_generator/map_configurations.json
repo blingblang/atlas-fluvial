@@ -1,0 +1,694 @@
+{
+  "maps": [
+    {
+      "id": 1,
+      "name": "Nantes and environs",
+      "southwest_corner": {
+        "latitude": 47.049433,
+        "longitude": -2.777580
+      },
+      "northeast_corner": {
+        "latitude": 47.587943,
+        "longitude": -1.182257
+      },
+      "description": "Greater Nantes metropolitan area including Loire estuary"
+    },
+    {
+      "id": 2,
+      "name": "Nantes Urban Core",
+      "southwest_corner": {
+        "latitude": 47.0768,
+        "longitude": -1.8485
+      },
+      "northeast_corner": {
+        "latitude": 47.36,
+        "longitude": -1.2587
+      },
+      "description": "Central Nantes and immediate suburbs"
+    },
+    {
+      "id": 3,
+      "name": "Loire Estuary",
+      "southwest_corner": {
+        "latitude": 46.8959,
+        "longitude": -2.8378
+      },
+      "northeast_corner": {
+        "latitude": 47.6041,
+        "longitude": -1.3622
+      },
+      "description": "Loire estuary from Nantes to Saint-Nazaire"
+    },
+    {
+      "id": 4,
+      "name": "Vendée Coast",
+      "southwest_corner": {
+        "latitude": 46.3959,
+        "longitude": -2.7309
+      },
+      "northeast_corner": {
+        "latitude": 47.1041,
+        "longitude": -1.2691
+      },
+      "description": "Coastal Vendée region"
+    },
+    {
+      "id": 5,
+      "name": "Wine Country",
+      "southwest_corner": {
+        "latitude": 46.9139,
+        "longitude": -1.8409
+      },
+      "northeast_corner": {
+        "latitude": 47.3861,
+        "longitude": -0.8591
+      },
+      "description": "Muscadet wine region southeast of Nantes"
+    },
+    {
+      "id": 6,
+      "name": "South Loire",
+      "southwest_corner": {
+        "latitude": 46.5459,
+        "longitude": -2.433
+      },
+      "northeast_corner": {
+        "latitude": 47.2541,
+        "longitude": -0.967
+      },
+      "description": "Region south of Loire including northern Vendée"
+    },
+    {
+      "id": 7,
+      "name": "Eastern Vendée",
+      "southwest_corner": {
+        "latitude": 46.2959,
+        "longitude": -1.7296
+      },
+      "northeast_corner": {
+        "latitude": 47.0041,
+        "longitude": -0.2704
+      },
+      "description": "Eastern inland Vendée"
+    },
+    {
+      "id": 8,
+      "name": "Clisson Region",
+      "southwest_corner": {
+        "latitude": 46.9459,
+        "longitude": -1.5764
+      },
+      "northeast_corner": {
+        "latitude": 47.2291,
+        "longitude": -0.988
+      },
+      "description": "Clisson and surrounding wine communes"
+    },
+    {
+      "id": 9,
+      "name": "Upper Erdre Valley",
+      "southwest_corner": {
+        "latitude": 47.2639,
+        "longitude": -1.8942
+      },
+      "northeast_corner": {
+        "latitude": 47.7361,
+        "longitude": -0.9058
+      },
+      "description": "Erdre river valley north of Nantes"
+    },
+    {
+      "id": 10,
+      "name": "Maine-et-Loire Border",
+      "southwest_corner": {
+        "latitude": 46.9959,
+        "longitude": -1.6392
+      },
+      "northeast_corner": {
+        "latitude": 47.7041,
+        "longitude": -0.1608
+      },
+      "description": "Eastern Loire-Atlantique border region"
+    },
+    {
+      "id": 11,
+      "name": "Redon Area",
+      "southwest_corner": {
+        "latitude": 47.4139,
+        "longitude": -2.5798
+      },
+      "northeast_corner": {
+        "latitude": 47.8861,
+        "longitude": -1.5886
+      },
+      "description": "Redon and Vilaine confluence"
+    },
+    {
+      "id": 12,
+      "name": "Pontchâteau",
+      "southwest_corner": {
+        "latitude": 47.2917,
+        "longitude": -2.3844
+      },
+      "northeast_corner": {
+        "latitude": 47.5749,
+        "longitude": -1.7922
+      },
+      "description": "Pontchâteau and surroundings"
+    },
+    {
+      "id": 13,
+      "name": "Savenay",
+      "southwest_corner": {
+        "latitude": 47.219,
+        "longitude": -2.2379
+      },
+      "northeast_corner": {
+        "latitude": 47.5022,
+        "longitude": -1.6465
+      },
+      "description": "Savenay area"
+    },
+    {
+      "id": 14,
+      "name": "Blain",
+      "southwest_corner": {
+        "latitude": 47.3348,
+        "longitude": -2.0595
+      },
+      "northeast_corner": {
+        "latitude": 47.618,
+        "longitude": -1.4667
+      },
+      "description": "Blain and forest region"
+    },
+    {
+      "id": 15,
+      "name": "Châteaubriant",
+      "southwest_corner": {
+        "latitude": 47.4806,
+        "longitude": -1.8795
+      },
+      "northeast_corner": {
+        "latitude": 47.9528,
+        "longitude": -0.8871
+      },
+      "description": "Châteaubriant region"
+    },
+    {
+      "id": 16,
+      "name": "Ancenis",
+      "southwest_corner": {
+        "latitude": 47.2251,
+        "longitude": -1.4791
+      },
+      "northeast_corner": {
+        "latitude": 47.5083,
+        "longitude": -0.8875
+      },
+      "description": "Ancenis and Loire valley"
+    },
+    {
+      "id": 17,
+      "name": "Herbignac",
+      "southwest_corner": {
+        "latitude": 47.3084,
+        "longitude": -2.6129
+      },
+      "northeast_corner": {
+        "latitude": 47.5916,
+        "longitude": -2.0205
+      },
+      "description": "Brière marsh region"
+    },
+    {
+      "id": 18,
+      "name": "Missillac",
+      "southwest_corner": {
+        "latitude": 47.3417,
+        "longitude": -2.4631
+      },
+      "northeast_corner": {
+        "latitude": 47.6249,
+        "longitude": -1.8703
+      },
+      "description": "Missillac area"
+    },
+    {
+      "id": 19,
+      "name": "Pays de Retz",
+      "southwest_corner": {
+        "latitude": 46.8139,
+        "longitude": -2.44
+      },
+      "northeast_corner": {
+        "latitude": 47.2861,
+        "longitude": -1.46
+      },
+      "description": "Pays de Retz coastal region"
+    },
+    {
+      "id": 20,
+      "name": "Grand-Lieu Lake",
+      "southwest_corner": {
+        "latitude": 46.9334,
+        "longitude": -1.9441
+      },
+      "northeast_corner": {
+        "latitude": 47.2166,
+        "longitude": -1.3559
+      },
+      "description": "Lake Grand-Lieu and surroundings"
+    },
+    {
+      "id": 21,
+      "name": "Vertou-Vallet Axis",
+      "southwest_corner": {
+        "latitude": 47.0234,
+        "longitude": -1.6646
+      },
+      "northeast_corner": {
+        "latitude": 47.3066,
+        "longitude": -1.0754
+      },
+      "description": "Wine route from Vertou to Vallet",
+      "slope": 45
+    },
+    {
+      "id": 22,
+      "name": "Sautron-Orvault",
+      "southwest_corner": {
+        "latitude": 47.1714,
+        "longitude": -1.8434
+      },
+      "northeast_corner": {
+        "latitude": 47.3602,
+        "longitude": -1.4498
+      },
+      "description": "Northwestern Nantes suburbs"
+    },
+    {
+      "id": 23,
+      "name": "Carquefou-Thouaré",
+      "southwest_corner": {
+        "latitude": 47.2006,
+        "longitude": -1.6469
+      },
+      "northeast_corner": {
+        "latitude": 47.3894,
+        "longitude": -1.2531
+      },
+      "description": "Eastern Nantes suburbs"
+    },
+    {
+      "id": 24,
+      "name": "Saint-Herblain",
+      "southwest_corner": {
+        "latitude": 47.1181,
+        "longitude": -1.8472
+      },
+      "northeast_corner": {
+        "latitude": 47.3069,
+        "longitude": -1.454
+      },
+      "description": "Saint-Herblain area"
+    },
+    {
+      "id": 25,
+      "name": "Bouguenais",
+      "southwest_corner": {
+        "latitude": 47.0806,
+        "longitude": -1.8159
+      },
+      "northeast_corner": {
+        "latitude": 47.2694,
+        "longitude": -1.4229
+      },
+      "description": "Bouguenais and airport area"
+    },
+    {
+      "id": 26,
+      "name": "La Montagne-Bouaye",
+      "southwest_corner": {
+        "latitude": 47.0556,
+        "longitude": -1.8764
+      },
+      "northeast_corner": {
+        "latitude": 47.2444,
+        "longitude": -1.4836
+      },
+      "description": "Southwestern suburbs"
+    },
+    {
+      "id": 27,
+      "name": "Sainte-Luce",
+      "southwest_corner": {
+        "latitude": 47.155,
+        "longitude": -1.6823
+      },
+      "northeast_corner": {
+        "latitude": 47.3438,
+        "longitude": -1.2889
+      },
+      "description": "Sainte-Luce-sur-Loire area"
+    },
+    {
+      "id": 28,
+      "name": "Haute-Goulaine",
+      "southwest_corner": {
+        "latitude": 47.1014,
+        "longitude": -1.6229
+      },
+      "northeast_corner": {
+        "latitude": 47.2902,
+        "longitude": -1.2299
+      },
+      "description": "Haute-Goulaine region"
+    },
+    {
+      "id": 29,
+      "name": "Les Sorinières",
+      "southwest_corner": {
+        "latitude": 47.0517,
+        "longitude": -1.7275
+      },
+      "northeast_corner": {
+        "latitude": 47.2405,
+        "longitude": -1.3347
+      },
+      "description": "Les Sorinières area"
+    },
+    {
+      "id": 30,
+      "name": "Pont-Saint-Martin",
+      "southwest_corner": {
+        "latitude": 47.0284,
+        "longitude": -1.7807
+      },
+      "northeast_corner": {
+        "latitude": 47.2172,
+        "longitude": -1.3881
+      },
+      "description": "Pont-Saint-Martin region"
+    },
+    {
+      "id": 31,
+      "name": "Saint-Philbert",
+      "southwest_corner": {
+        "latitude": 46.894,
+        "longitude": -1.9331
+      },
+      "northeast_corner": {
+        "latitude": 47.1772,
+        "longitude": -1.3453
+      },
+      "description": "Saint-Philbert-de-Grand-Lieu"
+    },
+    {
+      "id": 32,
+      "name": "Geneston",
+      "southwest_corner": {
+        "latitude": 46.9628,
+        "longitude": -1.7077
+      },
+      "northeast_corner": {
+        "latitude": 47.1516,
+        "longitude": -1.3157
+      },
+      "description": "Geneston area"
+    },
+    {
+      "id": 33,
+      "name": "Le Bignon",
+      "southwest_corner": {
+        "latitude": 47.0031,
+        "longitude": -1.6856
+      },
+      "northeast_corner": {
+        "latitude": 47.1919,
+        "longitude": -1.2932
+      },
+      "description": "Le Bignon commune"
+    },
+    {
+      "id": 34,
+      "name": "Montbert",
+      "southwest_corner": {
+        "latitude": 46.9667,
+        "longitude": -1.6891
+      },
+      "northeast_corner": {
+        "latitude": 47.1555,
+        "longitude": -1.2971
+      },
+      "description": "Montbert area"
+    },
+    {
+      "id": 35,
+      "name": "La Planche",
+      "southwest_corner": {
+        "latitude": 46.9292,
+        "longitude": -1.6287
+      },
+      "northeast_corner": {
+        "latitude": 47.118,
+        "longitude": -1.2369
+      },
+      "description": "La Planche commune"
+    },
+    {
+      "id": 36,
+      "name": "Vieillevigne",
+      "southwest_corner": {
+        "latitude": 46.8778,
+        "longitude": -1.6263
+      },
+      "northeast_corner": {
+        "latitude": 47.0666,
+        "longitude": -1.2349
+      },
+      "description": "Vieillevigne area"
+    },
+    {
+      "id": 37,
+      "name": "La Bernardière",
+      "southwest_corner": {
+        "latitude": 46.95,
+        "longitude": -1.4552
+      },
+      "northeast_corner": {
+        "latitude": 47.1388,
+        "longitude": -1.0632
+      },
+      "description": "La Bernardière region"
+    },
+    {
+      "id": 38,
+      "name": "Saint-Lumine",
+      "southwest_corner": {
+        "latitude": 46.9562,
+        "longitude": -1.5321
+      },
+      "northeast_corner": {
+        "latitude": 47.145,
+        "longitude": -1.1401
+      },
+      "description": "Saint-Lumine-de-Clisson"
+    },
+    {
+      "id": 39,
+      "name": "Gorges",
+      "southwest_corner": {
+        "latitude": 47.0073,
+        "longitude": -1.4984
+      },
+      "northeast_corner": {
+        "latitude": 47.1961,
+        "longitude": -1.106
+      },
+      "description": "Gorges commune"
+    },
+    {
+      "id": 40,
+      "name": "Monnières",
+      "southwest_corner": {
+        "latitude": 47.0367,
+        "longitude": -1.5491
+      },
+      "northeast_corner": {
+        "latitude": 47.2255,
+        "longitude": -1.1565
+      },
+      "description": "Monnières wine area"
+    },
+    {
+      "id": 41,
+      "name": "Le Pallet",
+      "southwest_corner": {
+        "latitude": 47.0445,
+        "longitude": -1.5307
+      },
+      "northeast_corner": {
+        "latitude": 47.2333,
+        "longitude": -1.1381
+      },
+      "description": "Le Pallet - Muscadet museum"
+    },
+    {
+      "id": 42,
+      "name": "La Haie-Fouassière",
+      "southwest_corner": {
+        "latitude": 47.0612,
+        "longitude": -1.597
+      },
+      "northeast_corner": {
+        "latitude": 47.25,
+        "longitude": -1.2042
+      },
+      "description": "La Haie-Fouassière"
+    },
+    {
+      "id": 43,
+      "name": "Saint-Fiacre",
+      "southwest_corner": {
+        "latitude": 47.0514,
+        "longitude": -1.6914
+      },
+      "northeast_corner": {
+        "latitude": 47.2402,
+        "longitude": -1.2986
+      },
+      "description": "Saint-Fiacre-sur-Maine"
+    },
+    {
+      "id": 44,
+      "name": "Château-Thébaud",
+      "southwest_corner": {
+        "latitude": 47.0306,
+        "longitude": -1.6171
+      },
+      "northeast_corner": {
+        "latitude": 47.2194,
+        "longitude": -1.2245
+      },
+      "description": "Château-Thébaud area"
+    },
+    {
+      "id": 45,
+      "name": "Mouzillon",
+      "southwest_corner": {
+        "latitude": 47.0464,
+        "longitude": -1.478
+      },
+      "northeast_corner": {
+        "latitude": 47.2352,
+        "longitude": -1.0854
+      },
+      "description": "Mouzillon commune"
+    },
+    {
+      "id": 46,
+      "name": "Le Landreau",
+      "southwest_corner": {
+        "latitude": 47.112,
+        "longitude": -1.503
+      },
+      "northeast_corner": {
+        "latitude": 47.3008,
+        "longitude": -1.1098
+      },
+      "description": "Le Landreau area"
+    },
+    {
+      "id": 47,
+      "name": "La Boissière",
+      "southwest_corner": {
+        "latitude": 47.1281,
+        "longitude": -1.4699
+      },
+      "northeast_corner": {
+        "latitude": 47.3169,
+        "longitude": -1.0767
+      },
+      "description": "La Boissière-du-Doré"
+    },
+    {
+      "id": 48,
+      "name": "Divatte-sur-Loire",
+      "southwest_corner": {
+        "latitude": 47.1856,
+        "longitude": -1.5469
+      },
+      "northeast_corner": {
+        "latitude": 47.3744,
+        "longitude": -1.1531
+      },
+      "description": "Divatte-sur-Loire commune"
+    },
+    {
+      "id": 49,
+      "name": "Saint-Julien",
+      "southwest_corner": {
+        "latitude": 47.1656,
+        "longitude": -1.5168
+      },
+      "northeast_corner": {
+        "latitude": 47.3544,
+        "longitude": -1.1232
+      },
+      "description": "Saint-Julien-de-Concelles"
+    },
+    {
+      "id": 50,
+      "name": "La Remaudière",
+      "southwest_corner": {
+        "latitude": 47.1423,
+        "longitude": -1.4411
+      },
+      "northeast_corner": {
+        "latitude": 47.3311,
+        "longitude": -1.0477
+      },
+      "description": "La Remaudière commune"
+    },
+    {
+      "id": 51,
+      "name": "Mauves-sur-Loire",
+      "southwest_corner": {
+        "latitude": 47.2042,
+        "longitude": -1.5877
+      },
+      "northeast_corner": {
+        "latitude": 47.393,
+        "longitude": -1.1939
+      },
+      "description": "Mauves-sur-Loire area"
+    },
+    {
+      "id": 52,
+      "name": "Le Cellier",
+      "southwest_corner": {
+        "latitude": 47.2256,
+        "longitude": -1.547
+      },
+      "northeast_corner": {
+        "latitude": 47.4144,
+        "longitude": -1.153
+      },
+      "description": "Le Cellier commune"
+    },
+    {
+      "id": 53,
+      "name": "Oudon",
+      "southwest_corner": {
+        "latitude": 47.2525,
+        "longitude": -1.4818
+      },
+      "northeast_corner": {
+        "latitude": 47.4413,
+        "longitude": -1.0876
+      },
+      "description": "Oudon and Loire valley"
+    }
+  ]
+}

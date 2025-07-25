@@ -1,0 +1,11 @@
+{
+  "waterways": [
+    {
+      "name": "Vilaine",
+      "type": "river",
+      "maps": [1],
+      "color": "#0064C8",
+      "width": 10
+    }
+  ]
+}

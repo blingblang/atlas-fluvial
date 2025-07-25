@@ -5,7 +5,7 @@ from pathlib import Path
 from typing import Tuple, Optional
 import tempfile
 
-from reportlab.lib.pagesizes import A4
+from reportlab.lib.pagesizes import A4, landscape
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import cm, mm
 from reportlab.lib.utils import ImageReader
@@ -22,7 +22,7 @@ class PDFGenerator:
     """Generate PDF with map and culture pages."""
     
     def __init__(self):
-        self.page_width, self.page_height = A4
+        self.page_width, self.page_height = landscape(A4)
         self.styles = getSampleStyleSheet()
         self._setup_styles()
     
@@ -50,7 +50,7 @@ class PDFGenerator:
         """Create the map page with label."""
         # Add page title
         canvas_obj.setFont("Helvetica-Bold", 24)
-        canvas_obj.drawCentredString(self.page_width / 2, self.page_height - 50, "Map 1")
+        canvas_obj.drawCentredString(self.page_width / 2, self.page_height - 50, "1: Nantes and environs")
         
         # Add map image
         if Path(map_image_path).exists():
@@ -138,7 +138,7 @@ class PDFGenerator:
     
     def generate_pdf(self, map_image_path: str, output_path: str) -> str:
         """Generate the complete PDF with map and culture pages."""
-        c = canvas.Canvas(output_path, pagesize=A4)
+        c = canvas.Canvas(output_path, pagesize=landscape(A4))
         
         # Create map page
         self.create_map_page(map_image_path, c)

@@ -14,7 +14,7 @@ class SimpleMapGenerator:
     
     def __init__(self):
         self.scale = 375000  # 1:375,000 scale
-        self.paper_size = (210, 297)  # A4 in mm
+        self.paper_size = (297, 210)  # A4 landscape in mm
         self.dpi = 300  # High quality for print
         
     def calculate_map_bounds(self, nw_lat: float, nw_lon: float) -> Tuple[float, float, float, float]:
@@ -94,6 +94,39 @@ class SimpleMapGenerator:
             draw.line([(x, 0), (x, target_height)], fill='lightgray', width=1)
         for y in range(0, target_height, grid_size):
             draw.line([(0, y), (target_width, y)], fill='lightgray', width=1)
+        
+        # Draw simulated waterways in light blue
+        # These are placeholder waterways - in production, you'd fetch real data
+        waterway_color = (173, 216, 230)  # Light blue RGB
+        
+        # Draw main river (diagonal across map)
+        river_points = []
+        for i in range(0, target_width, 50):
+            y = int(target_height * 0.3 + (i / target_width) * target_height * 0.4)
+            river_points.append((i, y))
+        
+        # Draw river with varying width
+        for i in range(len(river_points) - 1):
+            width = 15 + int(10 * math.sin(i * 0.1))  # Varying width
+            draw.line([river_points[i], river_points[i+1]], fill=waterway_color, width=width)
+        
+        # Draw tributary
+        tributary_start = (int(target_width * 0.7), 0)
+        tributary_end = (int(target_width * 0.5), int(target_height * 0.5))
+        draw.line([tributary_start, tributary_end], fill=waterway_color, width=12)
+        
+        # Draw another waterway
+        waterway2_points = [
+            (int(target_width * 0.2), int(target_height * 0.8)),
+            (int(target_width * 0.3), int(target_height * 0.7)),
+            (int(target_width * 0.4), int(target_height * 0.75)),
+            (int(target_width * 0.6), int(target_height * 0.6))
+        ]
+        for i in range(len(waterway2_points) - 1):
+            draw.line([waterway2_points[i], waterway2_points[i+1]], fill=waterway_color, width=10)
+        
+        # Add label for waterways
+        draw.text((100, target_height - 100), "Waterways shown in light blue", fill='blue', font=font)
         
         # Save image
         img.save(output_path, dpi=(self.dpi, self.dpi))

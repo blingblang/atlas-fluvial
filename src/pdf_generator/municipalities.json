@@ -1,0 +1,472 @@
+{
+  "municipalities": [
+    {
+      "name": "Nantes",
+      "latitude": 47.2184,
+      "longitude": -1.5536,
+      "type": "major",
+      "maps": [1, 2, 5],
+      "region": "Loire-Atlantique",
+      "description": "Prefecture of Loire-Atlantique"
+    },
+    {
+      "name": "Saint-Nazaire",
+      "latitude": 47.2733,
+      "longitude": -2.2134,
+      "type": "major",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Major port city"
+    },
+    {
+      "name": "Pornic",
+      "latitude": 47.1156,
+      "longitude": -2.1028,
+      "type": "medium",
+      "maps": [1, 3, 4],
+      "region": "Loire-Atlantique",
+      "description": "Coastal resort town"
+    },
+    {
+      "name": "Saint-Brévin-les-Pins",
+      "latitude": 47.2472,
+      "longitude": -2.1656,
+      "type": "medium",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Coastal town south of Loire estuary"
+    },
+    {
+      "name": "La Turballe",
+      "latitude": 47.3469,
+      "longitude": -2.5072,
+      "type": "medium",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Fishing port"
+    },
+    {
+      "name": "Guérande",
+      "latitude": 47.3280,
+      "longitude": -2.4288,
+      "type": "medium",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Medieval walled city"
+    },
+    {
+      "name": "La Baule",
+      "latitude": 47.2869,
+      "longitude": -2.3908,
+      "type": "medium",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Beach resort"
+    },
+    {
+      "name": "Pornichet",
+      "latitude": 47.2600,
+      "longitude": -2.3400,
+      "type": "medium",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Seaside resort"
+    },
+    {
+      "name": "Saint-Marc-sur-Mer",
+      "latitude": 47.2600,
+      "longitude": -2.3100,
+      "type": "small",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Coastal village"
+    },
+    {
+      "name": "Saint-Michel-Chef-Chef",
+      "latitude": 47.1819,
+      "longitude": -2.1483,
+      "type": "small",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Coastal commune"
+    },
+    {
+      "name": "Saint-Gilles-Croix-de-Vie",
+      "latitude": 46.6958,
+      "longitude": -1.9414,
+      "type": "medium",
+      "maps": [1, 4],
+      "region": "Vendée",
+      "description": "Fishing port"
+    },
+    {
+      "name": "Saint-Jean-de-Monts",
+      "latitude": 46.7933,
+      "longitude": -2.0592,
+      "type": "medium",
+      "maps": [1, 4],
+      "region": "Vendée",
+      "description": "Beach resort"
+    },
+    {
+      "name": "Notre-Dame-de-Monts",
+      "latitude": 46.8330,
+      "longitude": -2.1290,
+      "type": "small",
+      "maps": [1, 4],
+      "region": "Vendée",
+      "description": "Coastal town"
+    },
+    {
+      "name": "Saint-Hilaire-de-Riez",
+      "latitude": 46.7667,
+      "longitude": -1.9500,
+      "type": "small",
+      "maps": [1, 4],
+      "region": "Vendée",
+      "description": "Coastal commune"
+    },
+    {
+      "name": "Brétignolles-sur-Mer",
+      "latitude": 46.6247,
+      "longitude": -1.8614,
+      "type": "small",
+      "maps": [1, 4],
+      "region": "Vendée",
+      "description": "Beach town"
+    },
+    {
+      "name": "Bouin",
+      "latitude": 46.9750,
+      "longitude": -2.0000,
+      "type": "small",
+      "maps": [1, 4],
+      "region": "Vendée",
+      "description": "Oyster farming area"
+    },
+    {
+      "name": "Challans",
+      "latitude": 46.8433,
+      "longitude": -1.8783,
+      "type": "medium",
+      "maps": [1, 4, 6],
+      "region": "Vendée",
+      "description": "Market town"
+    },
+    {
+      "name": "Machecoul",
+      "latitude": 46.9933,
+      "longitude": -1.8233,
+      "type": "medium",
+      "maps": [1, 6],
+      "region": "Loire-Atlantique",
+      "description": "Historic town"
+    },
+    {
+      "name": "Sainte-Pazanne",
+      "latitude": 47.1033,
+      "longitude": -1.8100,
+      "type": "small",
+      "maps": [1, 6],
+      "region": "Loire-Atlantique",
+      "description": "Rural commune"
+    },
+    {
+      "name": "Paimbœuf",
+      "latitude": 47.2867,
+      "longitude": -2.0292,
+      "type": "small",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Former port on Loire"
+    },
+    {
+      "name": "Corsept",
+      "latitude": 47.2781,
+      "longitude": -2.0625,
+      "type": "small",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Loire estuary commune"
+    },
+    {
+      "name": "Frossay",
+      "latitude": 47.2450,
+      "longitude": -1.9319,
+      "type": "small",
+      "maps": [1],
+      "region": "Loire-Atlantique",
+      "description": "Rural commune"
+    },
+    {
+      "name": "Le Pellerin",
+      "latitude": 47.2000,
+      "longitude": -1.7533,
+      "type": "small",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Loire river town"
+    },
+    {
+      "name": "Couëron",
+      "latitude": 47.2150,
+      "longitude": -1.7217,
+      "type": "medium",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Nantes suburb"
+    },
+    {
+      "name": "Indre",
+      "latitude": 47.2000,
+      "longitude": -1.6667,
+      "type": "small",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Nantes suburb"
+    },
+    {
+      "name": "Rezé",
+      "latitude": 47.1833,
+      "longitude": -1.5500,
+      "type": "medium",
+      "maps": [1, 2, 5],
+      "region": "Loire-Atlantique",
+      "description": "Nantes metropolis"
+    },
+    {
+      "name": "Vertou",
+      "latitude": 47.1689,
+      "longitude": -1.4697,
+      "type": "medium",
+      "maps": [1, 2, 5],
+      "region": "Loire-Atlantique",
+      "description": "Wine-producing suburb"
+    },
+    {
+      "name": "Saint-Sébastien-sur-Loire",
+      "latitude": 47.2078,
+      "longitude": -1.5039,
+      "type": "medium",
+      "maps": [1, 2, 5],
+      "region": "Loire-Atlantique",
+      "description": "Nantes suburb"
+    },
+    {
+      "name": "Orvault",
+      "latitude": 47.2708,
+      "longitude": -1.6228,
+      "type": "medium",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Northern Nantes suburb"
+    },
+    {
+      "name": "Carquefou",
+      "latitude": 47.2975,
+      "longitude": -1.4917,
+      "type": "medium",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Eastern Nantes suburb"
+    },
+    {
+      "name": "La Chapelle-sur-Erdre",
+      "latitude": 47.3000,
+      "longitude": -1.5500,
+      "type": "medium",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Erdre valley town"
+    },
+    {
+      "name": "Sautron",
+      "latitude": 47.2608,
+      "longitude": -1.6703,
+      "type": "small",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Nantes suburb"
+    },
+    {
+      "name": "Basse-Goulaine",
+      "latitude": 47.2028,
+      "longitude": -1.4481,
+      "type": "small",
+      "maps": [1, 2, 5],
+      "region": "Loire-Atlantique",
+      "description": "Wine area suburb"
+    },
+    {
+      "name": "Saint-Aignan-Grandlieu",
+      "latitude": 47.1267,
+      "longitude": -1.6300,
+      "type": "small",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Lake Grandlieu area"
+    },
+    {
+      "name": "Legé",
+      "latitude": 46.8861,
+      "longitude": -1.5989,
+      "type": "small",
+      "maps": [1, 6],
+      "region": "Loire-Atlantique",
+      "description": "Rural commune"
+    },
+    {
+      "name": "Sainte-Hermine",
+      "latitude": 46.5558,
+      "longitude": -1.0619,
+      "type": "small",
+      "maps": [6, 7],
+      "region": "Vendée",
+      "description": "Interior Vendée town"
+    },
+    {
+      "name": "Bournezeau",
+      "latitude": 46.6356,
+      "longitude": -1.1753,
+      "type": "small",
+      "maps": [6],
+      "region": "Vendée",
+      "description": "Rural commune"
+    },
+    {
+      "name": "Sainte-Radégonde-des-Noyers",
+      "latitude": 46.7064,
+      "longitude": -0.9894,
+      "type": "small",
+      "maps": [6, 7],
+      "region": "Vendée",
+      "description": "Small rural commune"
+    },
+    {
+      "name": "Vallet",
+      "latitude": 47.1614,
+      "longitude": -1.2667,
+      "type": "medium",
+      "maps": [1, 5, 8],
+      "region": "Loire-Atlantique",
+      "description": "Muscadet wine capital"
+    },
+    {
+      "name": "Clisson",
+      "latitude": 47.0875,
+      "longitude": -1.2822,
+      "type": "medium",
+      "maps": [1, 5, 8],
+      "region": "Loire-Atlantique",
+      "description": "Italian-style architecture"
+    },
+    {
+      "name": "Le Loroux-Bottereau",
+      "latitude": 47.2392,
+      "longitude": -1.3489,
+      "type": "small",
+      "maps": [1, 5, 8],
+      "region": "Loire-Atlantique",
+      "description": "Wine commune"
+    },
+    {
+      "name": "La Chapelle-Heulin",
+      "latitude": 47.1775,
+      "longitude": -1.3339,
+      "type": "small",
+      "maps": [1, 5, 8],
+      "region": "Loire-Atlantique",
+      "description": "Vineyard area"
+    },
+    {
+      "name": "Remouillé",
+      "latitude": 47.0578,
+      "longitude": -1.3836,
+      "type": "small",
+      "maps": [1, 5, 8],
+      "region": "Loire-Atlantique",
+      "description": "Rural wine commune"
+    },
+    {
+      "name": "Maisdon-sur-Sèvre",
+      "latitude": 47.0961,
+      "longitude": -1.3831,
+      "type": "small",
+      "maps": [1, 5, 8],
+      "region": "Loire-Atlantique",
+      "description": "Sèvre valley commune"
+    },
+    {
+      "name": "Aigrefeuille-sur-Maine",
+      "latitude": 46.9442,
+      "longitude": -1.3061,
+      "type": "small",
+      "maps": [1, 8],
+      "region": "Loire-Atlantique",
+      "description": "Maine valley commune"
+    },
+    {
+      "name": "Nort-sur-Erdre",
+      "latitude": 47.4392,
+      "longitude": -1.4994,
+      "type": "small",
+      "maps": [1, 2, 9],
+      "region": "Loire-Atlantique",
+      "description": "Erdre valley town"
+    },
+    {
+      "name": "Saint-André-des-Eaux",
+      "latitude": 47.3156,
+      "longitude": -2.3156,
+      "type": "small",
+      "maps": [1, 3],
+      "region": "Loire-Atlantique",
+      "description": "Near Saint-Nazaire"
+    },
+    {
+      "name": "La Montagne",
+      "latitude": 47.1872,
+      "longitude": -1.6844,
+      "type": "small",
+      "maps": [1, 2],
+      "region": "Loire-Atlantique",
+      "description": "Southwest Nantes suburb"
+    },
+    {
+      "name": "Barbechat",
+      "latitude": 47.2833,
+      "longitude": -1.2833,
+      "type": "small",
+      "maps": [1, 5],
+      "region": "Loire-Atlantique",
+      "description": "Small Loire commune"
+    },
+    {
+      "name": "Ingrandes",
+      "latitude": 47.4067,
+      "longitude": -0.9206,
+      "type": "small",
+      "maps": [9, 10],
+      "region": "Maine-et-Loire",
+      "description": "Loire river town"
+    },
+    {
+      "name": "Ponton",
+      "latitude": 47.3500,
+      "longitude": -1.8500,
+      "type": "small",
+      "maps": [1],
+      "region": "Loire-Atlantique",
+      "description": "Small locality"
+    },
+    {
+      "name": "Chapelle-Heulin",
+      "latitude": 47.1775,
+      "longitude": -1.3339,
+      "type": "small",
+      "maps": [1, 5, 8],
+      "region": "Loire-Atlantique",
+      "description": "Duplicate of La Chapelle-Heulin"
+    }
+  ]
+}
