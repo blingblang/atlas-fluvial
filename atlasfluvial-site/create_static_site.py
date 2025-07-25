@@ -8,11 +8,21 @@ from pathlib import Path
 def create_static_site():
     """Create static HTML files from the Next.js components."""
     
+    # Save the France map if it exists before clearing directory
+    france_map_backup = None
+    france_map = Path("out/france-map-grayscale.jpg")
+    if france_map.exists():
+        france_map_backup = france_map.read_bytes()
+    
     # Create output directory
     out_dir = Path("out")
     if out_dir.exists():
         shutil.rmtree(out_dir)
     out_dir.mkdir()
+    
+    # Restore France map if we had backed it up
+    if france_map_backup:
+        france_map.write_bytes(france_map_backup)
     
     # Copy public files
     public_dir = Path("public")
@@ -20,11 +30,6 @@ def create_static_site():
         for item in public_dir.iterdir():
             if item.is_file():
                 shutil.copy2(item, out_dir)
-    
-    # Copy the France map if it exists
-    france_map = Path("out/france-map-grayscale.jpg")
-    if france_map.exists():
-        shutil.copy2(france_map, out_dir)
     
     # Base HTML template
     base_template = """<!DOCTYPE html>
@@ -556,8 +561,8 @@ def create_static_site():
                 <img src="/france-map-grayscale.jpg" alt="France Waterways Map" style="width: 100%; height: auto; display: block; filter: grayscale(100%);">
                 
                 <!-- Nantes Clickable Overlay -->
-                <a href="/maps/map_1_latest.pdf" 
-                   style="position: absolute; left: 28.5%; top: 40%; width: 40px; height: 40px; display: block;"
+                <a href="/map_1_latest.pdf" 
+                   style="position: absolute; left: 37%; top: 47%; width: 40px; height: 40px; display: block;"
                    title="Nantes and its environs">
                     <div style="position: relative; width: 100%; height: 100%;">
                         <!-- Pulsing dot -->
