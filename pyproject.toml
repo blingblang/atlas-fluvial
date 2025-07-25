@@ -22,6 +22,11 @@ dependencies = [
     "pyppeteer",
     "html2text",
     "rich",
+    "reportlab>=4.0.0",
+    "pillow>=10.0.0",
+    "folium>=0.15.0",
+    "selenium>=4.0.0",
+    "requests>=2.31.0",
 ]
 
 [project.optional-dependencies]
@@ -32,10 +37,11 @@ requires = ["setuptools>=73.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-packages = ["email_assistant"]
+packages = ["email_assistant", "pdf_generator"]
 
 [tool.setuptools.package-dir]
 "email_assistant" = "src/email_assistant"
+"pdf_generator" = "src/pdf_generator"
 
 [tool.setuptools.package-data]
 "*" = ["py.typed"]
