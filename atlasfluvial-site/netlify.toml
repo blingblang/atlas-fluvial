@@ -1,34 +1,25 @@
 [build]
-  command = "pip install -r requirements.txt && python create_static_site.py"
+  command = "npm install && npm run build"
   publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
-  PYTHON_VERSION = "3.9"
 
-# Redirect all 404s to index for client-side routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  conditions = {Role = ["admin", "user"]}
-  force = false
-
-# Ensure clean URLs work
+# Handle trailing slashes (Next.js export uses them)
 [[redirects]]
   from = "/tools"
-  to = "/tools/index.html"
-  status = 200
+  to = "/tools/"
+  status = 301
 
 [[redirects]]
   from = "/tools/waterways-assistant"
-  to = "/tools/waterways-assistant/index.html"
-  status = 200
+  to = "/tools/waterways-assistant/"
+  status = 301
 
 [[redirects]]
   from = "/tools/elevation"
-  to = "/tools/elevation/index.html"
-  status = 200
+  to = "/tools/elevation/"
+  status = 301
 
 [[headers]]
   for = "/*"
