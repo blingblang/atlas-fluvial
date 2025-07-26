@@ -83,14 +83,44 @@ class PDFGenerator:
         grid_width = (self.page_width - 2 * margin) / 2
         grid_height = (self.page_height - 3 * margin) / 3
         
-        # Lorem ipsum text
-        lorem_ipsum = [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "Ut enim ad minim veniam, quis nostrud exercitation ullamco.",
-            "Duis aute irure dolor in reprehenderit in voluptate velit.",
-            "Excepteur sint occaecat cupidatat non proident, sunt in culpa.",
-            "Qui officia deserunt mollit anim id est laborum."
+        # Section titles and content for Nantes
+        sections = [
+            {
+                "title": "Bars/Cafes",
+                "content": "Le Lieu Unique, housed in the former LU biscuit factory, offers a unique blend of bar, café, and cultural center with its famous curved tower. "
+                          "La Cigale brasserie on Place Graslin has been serving locals since 1895 with its ornate Belle Époque interior. "
+                          "Café du Commerce near the Château provides riverside terrace seating with views of the Loire."
+            },
+            {
+                "title": "Groceries",
+                "content": "The Marché de Talensac is Nantes' largest covered market, operating Tuesday through Sunday with fresh local produce and seafood. "
+                          "Passage Pommeraye houses specialty food shops in a stunning 19th-century shopping arcade. "
+                          "For waterway provisions, the Carrefour Market on Quai de la Fosse stays open until 9 PM and caters to boaters."
+            },
+            {
+                "title": "Public Safety",
+                "content": "The Port Captain's office at Quai Ernest Renaud monitors VHF Channel 9 for emergencies on the Loire. "
+                          "Emergency services can be reached at 112, with the nearest hospital being CHU Nantes along the tramway Line 1. "
+                          "The river police patrol regularly between Trentemoult and the city center, especially during summer months."
+            },
+            {
+                "title": "Upcoming Events",
+                "content": "Le Voyage à Nantes transforms the city into an open-air gallery each summer from July to September. "
+                          "The Rendez-vous de l'Erdre jazz festival brings floating stages to the river every August. "
+                          "Les Machines de l'île hosts special nighttime events on the first Friday of each month."
+            },
+            {
+                "title": "Local Customs",
+                "content": "Nantais traditionally greet with 'Salut' rather than 'Bonjour' in casual settings, reflecting the city's maritime heritage. "
+                          "It's customary to buy a round of Muscadet wine when mooring at local yacht clubs along the Erdre. "
+                          "Shops close between noon and 2 PM, and most restaurants don't serve dinner before 7:30 PM."
+            },
+            {
+                "title": "Trivia",
+                "content": "Jules Verne was born in Nantes in 1828, and his childhood home on Île Feydeau inspired his maritime adventures. "
+                          "The city was once called 'Venice of the West' due to its many river channels, most now filled in. "
+                          "Petit-Beurre LU cookies have 52 teeth representing weeks of the year and 24 holes for hours in a day."
+            }
         ]
         
         # Draw 6 sections
@@ -102,39 +132,40 @@ class PDFGenerator:
                 # Draw border
                 canvas_obj.rect(x, y, grid_width - 0.5 * cm, grid_height - 0.5 * cm)
                 
-                # Add lorem ipsum text
-                text_idx = row * 2 + col
-                canvas_obj.setFont("Helvetica", 10)
+                # Get section data
+                section_idx = row * 2 + col
+                section = sections[section_idx]
                 
-                # Draw text with word wrap
-                text = lorem_ipsum[text_idx]
-                text_object = canvas_obj.beginText(x + 0.5 * cm, y + grid_height - cm)
+                # Add section title
+                canvas_obj.setFont("Helvetica-Bold", 12)
+                canvas_obj.drawString(x + 0.5 * cm, y + grid_height - 0.8 * cm, section["title"])
                 
-                # Simple word wrap
-                words = text.split()
+                # Add section content
+                canvas_obj.setFont("Helvetica", 9)
+                text_object = canvas_obj.beginText(x + 0.5 * cm, y + grid_height - 1.5 * cm)
+                
+                # Word wrap the content
+                words = section["content"].split()
                 line = ""
                 max_width = grid_width - cm
+                line_height = 12
+                lines_drawn = 0
+                max_lines = int((grid_height - 2 * cm) / line_height)
                 
                 for word in words:
                     test_line = line + word + " "
-                    if canvas_obj.stringWidth(test_line, "Helvetica", 10) < max_width:
+                    if canvas_obj.stringWidth(test_line, "Helvetica", 9) < max_width:
                         line = test_line
                     else:
-                        text_object.textLine(line.strip())
+                        if lines_drawn < max_lines:
+                            text_object.textLine(line.strip())
+                            lines_drawn += 1
                         line = word + " "
                 
-                if line:
+                if line and lines_drawn < max_lines:
                     text_object.textLine(line.strip())
                 
                 canvas_obj.drawText(text_object)
-                
-                # Add placeholder for image
-                img_y = y + 0.5 * cm
-                img_height = grid_height * 0.4
-                canvas_obj.setFillColor(colors.lightgrey)
-                canvas_obj.rect(x + 0.5 * cm, img_y, grid_width - cm, img_height, fill=1)
-                canvas_obj.setFillColor(colors.black)
-                canvas_obj.drawCentredString(x + grid_width / 2, img_y + img_height / 2, "[Stock Photo]")
     
     def generate_pdf(self, map_image_path: str, output_path: str) -> str:
         """Generate the complete PDF with map and culture pages."""
