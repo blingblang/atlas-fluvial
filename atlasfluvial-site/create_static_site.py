@@ -222,6 +222,7 @@ def create_static_site():
                 <li><a href="/planning/">Journey Planning</a></li>
                 <li><a href="/guides/">Navigation Guides</a></li>
                 <li><a href="/vessels/">Vessel Options</a></li>
+                <li><a href="/tools/">Tools</a></li>
                 <li><a href="/resources/">Resources</a></li>
                 <li><a href="/about/">About</a></li>
             </ul>
@@ -242,6 +243,8 @@ def create_static_site():
                     <li><a href="/waterways/">Waterway Maps</a></li>
                     <li><a href="/guides/">Navigation Guides</a></li>
                     <li><a href="/planning/">Journey Planning</a></li>
+                    <li><a href="/tools/waterways-assistant/">AI Assistant</a></li>
+                    <li><a href="/tools/elevation/">Elevation Tool</a></li>
                 </ul>
             </div>
             <div>
@@ -538,6 +541,172 @@ def create_static_site():
                     <h3>Canal Authorities</h3>
                     <p>VHF Channel 10</p>
                     <p style="font-size: 0.875rem;">Standard in most regions</p>
+                </div>
+            </div>
+        </div>
+    </section>"""
+        },
+        
+        "tools/index.html": {
+            "title": "Navigation Tools",
+            "description": "Advanced tools for waterway navigation - AI assistant, elevation finder, and more.",
+            "content": """
+    <section class="hero" style="padding: 4rem 2rem;">
+        <h1>Navigation Tools</h1>
+        <p>Advanced digital tools to enhance your waterway navigation experience.</p>
+    </section>
+    
+    <section class="section">
+        <h2 class="section-title">Available Tools</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+            <a href="/tools/waterways-assistant/" class="card" style="text-decoration: none; color: inherit; display: block;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="width: 48px; height: 48px; background: #e0e7ff; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 24px;">🤖</span>
+                    </div>
+                    <h3 style="margin: 0;">AI Waterways Assistant</h3>
+                </div>
+                <p>Get instant answers about French waterways using our RAG-enhanced AI. Ask about navigation, locks, elevations, routes, and more.</p>
+                <div style="margin-top: 1rem; color: #0064C8; font-weight: 600;">
+                    Try the Assistant →
+                </div>
+            </a>
+            
+            <a href="/tools/elevation/" class="card" style="text-decoration: none; color: inherit; display: block;">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="width: 48px; height: 48px; background: #e0e7ff; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 24px;">📏</span>
+                    </div>
+                    <h3 style="margin: 0;">Elevation Finder</h3>
+                </div>
+                <p>Find precise elevation data for any French river segment. Search by river name or coordinates using RiverATLAS data.</p>
+                <div style="margin-top: 1rem; color: #0064C8; font-weight: 600;">
+                    Check Elevations →
+                </div>
+            </a>
+        </div>
+        
+        <div class="card" style="margin-top: 2rem; background: #f0f9ff;">
+            <h3 style="margin-bottom: 1rem;">Coming Soon</h3>
+            <div class="grid grid-3">
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">Route Calculator</h4>
+                    <p style="font-size: 0.875rem; color: #718096;">Calculate optimal routes between any two points on the waterway network.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">Lock Timer</h4>
+                    <p style="font-size: 0.875rem; color: #718096;">Estimate journey times including lock passages and waiting times.</p>
+                </div>
+                <div>
+                    <h4 style="margin-bottom: 0.5rem;">Mooring Finder</h4>
+                    <p style="font-size: 0.875rem; color: #718096;">Locate available moorings with real-time availability updates.</p>
+                </div>
+            </div>
+        </div>
+    </section>"""
+        },
+        
+        "tools/waterways-assistant/index.html": {
+            "title": "AI Waterways Assistant",
+            "description": "Get instant, accurate information about French waterways using our RAG-enhanced AI assistant.",
+            "content": """
+    <section class="hero" style="padding: 4rem 2rem; background: linear-gradient(135deg, #0064C8 0%, #0078DC 100%);">
+        <h1>AI Waterways Assistant</h1>
+        <p>Get instant, accurate information about French waterways using our RAG-enhanced AI assistant.</p>
+    </section>
+    
+    <section class="section">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="card" style="padding: 2rem; text-align: center;">
+                <h2 style="margin-bottom: 1rem;">Interactive Assistant Coming Soon</h2>
+                <p style="color: #718096; margin-bottom: 2rem;">
+                    Our AI-powered waterways assistant will be available here soon. 
+                    It combines advanced AI with comprehensive waterway data to answer your navigation questions instantly.
+                </p>
+                
+                <div style="background: #f0f9ff; padding: 2rem; border-radius: 0.5rem; margin: 2rem 0;">
+                    <h3 style="margin-bottom: 1rem;">What You Can Ask:</h3>
+                    <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 0.5rem;">📏 "What is the elevation of the Canal du Midi near Toulouse?"</li>
+                            <li style="margin-bottom: 0.5rem;">🚢 "Are there locks on the Rhône suitable for pleasure boats?"</li>
+                            <li style="margin-bottom: 0.5rem;">📍 "Find waterways near Carcassonne"</li>
+                            <li style="margin-bottom: 0.5rem;">⚓ "What is the maximum draft allowed on the Seine?"</li>
+                            <li style="margin-bottom: 0.5rem;">🗺️ "How many locks between Lyon and the Mediterranean?"</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="grid grid-3" style="margin-top: 2rem; text-align: left;">
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">🧠 RAG Technology</h4>
+                        <p style="font-size: 0.875rem; color: #718096;">Combines AI with real data retrieval for accurate information.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">📚 Comprehensive Data</h4>
+                        <p style="font-size: 0.875rem; color: #718096;">Access to detailed information about all major French waterways.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">✅ Verified Sources</h4>
+                        <p style="font-size: 0.875rem; color: #718096;">Information from official navigation guides and databases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>"""
+        },
+        
+        "tools/elevation/index.html": {
+            "title": "Elevation Finder",
+            "description": "Find precise elevation data for any French river segment using RiverATLAS data.",
+            "content": """
+    <section class="hero" style="padding: 4rem 2rem; background: linear-gradient(135deg, #0064C8 0%, #0078DC 100%);">
+        <h1>Elevation Finder</h1>
+        <p>Find precise elevation data for any French river segment using RiverATLAS data.</p>
+    </section>
+    
+    <section class="section">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="card" style="padding: 2rem; text-align: center;">
+                <h2 style="margin-bottom: 1rem;">Elevation Tool Coming Soon</h2>
+                <p style="color: #718096; margin-bottom: 2rem;">
+                    Our precision elevation finder will help you understand the vertical profile of any French waterway.
+                    Perfect for planning locks, understanding gradients, and navigation preparation.
+                </p>
+                
+                <div style="background: #f0f9ff; padding: 2rem; border-radius: 0.5rem; margin: 2rem 0;">
+                    <h3 style="margin-bottom: 1rem;">Search Options:</h3>
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 2rem; text-align: left;">
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">🏞️ By River Name</h4>
+                            <p style="font-size: 0.875rem; color: #718096;">
+                                Search by river name to get elevation data for specific segments.
+                                Example: "Seine near Paris" or "Canal du Midi"
+                            </p>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem;">📍 By Coordinates</h4>
+                            <p style="font-size: 0.875rem; color: #718096;">
+                                Use precise GPS coordinates to find elevation at any point.
+                                Example: "48.8566, 2.3522" (Paris)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-3" style="margin-top: 2rem; text-align: left;">
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">📊 Elevation Profiles</h4>
+                        <p style="font-size: 0.875rem; color: #718096;">View complete elevation profiles along river segments.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">🎯 High Precision</h4>
+                        <p style="font-size: 0.875rem; color: #718096;">Data from RiverATLAS with meter-level accuracy.</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">🗺️ Coverage</h4>
+                        <p style="font-size: 0.875rem; color: #718096;">Complete coverage of all French navigable waterways.</p>
+                    </div>
                 </div>
             </div>
         </div>

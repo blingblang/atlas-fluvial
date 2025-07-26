@@ -9,6 +9,12 @@ const navigation = [
   { name: 'Journey Planning', href: '/planning' },
   { name: 'Navigation Guides', href: '/guides' },
   { name: 'Vessel Options', href: '/vessels' },
+  { name: 'Tools', href: '/tools', 
+    submenu: [
+      { name: 'AI Assistant', href: '/tools/waterways-assistant' },
+      { name: 'Elevation Finder', href: '/tools/elevation' }
+    ]
+  },
   { name: 'Resources', href: '/resources' },
   { name: 'About', href: '/about' },
 ]
@@ -34,13 +40,37 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="text-gray-700 hover:text-ocean px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+                  item.submenu ? (
+                    <div key={item.name} className="relative group">
+                      <Link href={item.href} className="text-gray-700 hover:text-ocean px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center">
+                        {item.name}
+                        <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </Link>
+                      <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                        <div className="py-1">
+                          {item.submenu.map((subitem) => (
+                            <Link
+                              key={subitem.name}
+                              href={subitem.href}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-ocean"
+                            >
+                              {subitem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="text-gray-700 hover:text-ocean px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>
@@ -68,14 +98,34 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-ocean block px-3 py-2 rounded-md text-base font-medium"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                item.submenu ? (
+                  <div key={item.name}>
+                    <div className="text-gray-700 px-3 py-2 rounded-md text-base font-medium">
+                      {item.name}
+                    </div>
+                    <div className="pl-6">
+                      {item.submenu.map((subitem) => (
+                        <Link
+                          key={subitem.name}
+                          href={subitem.href}
+                          className="text-gray-600 hover:text-ocean block px-3 py-2 rounded-md text-sm"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {subitem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-700 hover:text-ocean block px-3 py-2 rounded-md text-base font-medium"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
             </div>
           </div>
@@ -99,6 +149,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><Link href="/waterways" className="text-gray-300 hover:text-white">Waterway Maps</Link></li>
                 <li><Link href="/guides" className="text-gray-300 hover:text-white">Navigation Guides</Link></li>
                 <li><Link href="/planning" className="text-gray-300 hover:text-white">Journey Planning</Link></li>
+                <li><Link href="/tools/waterways-assistant" className="text-gray-300 hover:text-white">AI Assistant</Link></li>
+                <li><Link href="/tools/elevation" className="text-gray-300 hover:text-white">Elevation Tool</Link></li>
               </ul>
             </div>
             <div>
