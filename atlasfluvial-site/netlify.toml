@@ -1,11 +1,34 @@
 [build]
-  command = "npm run build"
+  command = "pip install -r requirements.txt && python create_static_site.py"
   publish = "out"
 
 [build.environment]
   NODE_VERSION = "18"
+  PYTHON_VERSION = "3.9"
 
-# Redirects removed for static export
+# Redirect all 404s to index for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin", "user"]}
+  force = false
+
+# Ensure clean URLs work
+[[redirects]]
+  from = "/tools"
+  to = "/tools/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/waterways-assistant"
+  to = "/tools/waterways-assistant/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tools/elevation"
+  to = "/tools/elevation/index.html"
+  status = 200
 
 [[headers]]
   for = "/*"

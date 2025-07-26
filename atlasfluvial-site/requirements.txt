@@ -1,0 +1,3 @@
+# Python dependencies for static site generation
+Pillow>=9.0.0
+reportlab>=3.6.0

@@ -1,1 +1,18 @@
-/*    /index.html    200
+# Clean URLs - redirect paths without trailing slashes to index.html files
+/about              /about/index.html              200
+/guides             /guides/index.html             200
+/planning           /planning/index.html           200
+/resources          /resources/index.html          200
+/tools              /tools/index.html              200
+/vessels            /vessels/index.html            200
+/waterways          /waterways/index.html          200
+
+# Tools section
+/tools/waterways-assistant    /tools/waterways-assistant/index.html    200
+/tools/elevation              /tools/elevation/index.html              200
+
+# Waterways subsection
+/waterways/france            /waterways/france/index.html              200
+
+# Fallback for everything else (must be last)
+/*                           /index.html                               200
