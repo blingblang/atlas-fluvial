@@ -1,0 +1,53 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - "alerts.yml"
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - alertmanager:9093
+
+scrape_configs:
+  # Prometheus itself
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+    scrape_interval: 30s
+
+  # System Metrics
+  - job_name: 'node'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 30s
+
+  # Push Gateway for application metrics
+  - job_name: 'pushgateway'
+    static_configs:
+      - targets: ['pushgateway:9091']
+    scrape_interval: 30s
+    honor_labels: true
+
+  # Grafana Metrics
+  - job_name: 'grafana'
+    static_configs:
+      - targets: ['grafana:3000']
+    scrape_interval: 30s
+    metrics_path: /metrics
+
+  # Python Application metrics (when instrumented)
+  - job_name: 'atlas-fluvial-app'
+    static_configs:
+      - targets: ['host.docker.internal:8000']  # Adjust port based on application configuration
+    scrape_interval: 15s
+    metrics_path: /metrics
+
+  # LangGraph Agent metrics (if exposed)
+  - job_name: 'langgraph-agents'
+    static_configs:
+      - targets: ['host.docker.internal:8123']  # Adjust based on LangGraph server port
+    scrape_interval: 30s
+    metrics_path: /metrics
