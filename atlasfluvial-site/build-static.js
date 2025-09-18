@@ -15,7 +15,7 @@ function copyRecursive(src, dest) {
   const exists = fs.existsSync(src);
   const stats = exists && fs.statSync(src);
   const isDirectory = exists && stats.isDirectory();
-  
+
   if (isDirectory) {
     if (!fs.existsSync(dest)) {
       fs.mkdirSync(dest, { recursive: true });
@@ -24,14 +24,12 @@ function copyRecursive(src, dest) {
       copyRecursive(path.join(src, child), path.join(dest, child));
     });
   } else {
-    // For HTML files, copy with directory structure
-    if (src.endsWith('.html')) {
-      const dir = path.dirname(dest);
-      if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { recursive: true });
-      }
-      fs.copyFileSync(src, dest);
+    // Copy all files, not just HTML
+    const dir = path.dirname(dest);
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
     }
+    fs.copyFileSync(src, dest);
   }
 }
 
