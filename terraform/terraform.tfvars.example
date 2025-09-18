@@ -1,0 +1,7 @@
+# Vercel Project Configuration
+project_name      = "atlas-fluvial"
+github_repo       = "blingblang/atlas-fluvial"
+production_branch = "main"
+
+# Set the Vercel API token via environment variable:
+# export VERCEL_API_TOKEN="your-vercel-api-token"

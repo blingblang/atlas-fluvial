@@ -1,0 +1,47 @@
+{
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": "out",
+  "framework": "nextjs",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/tools",
+      "destination": "/tools/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/waterways-assistant",
+      "destination": "/tools/waterways-assistant/",
+      "permanent": true
+    },
+    {
+      "source": "/tools/elevation",
+      "destination": "/tools/elevation/",
+      "permanent": true
+    }
+  ]
+}
